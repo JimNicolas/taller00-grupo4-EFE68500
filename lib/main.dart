@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -25,10 +24,8 @@ class ContadorDeLetras extends StatefulWidget {
 
 class _ContadorDeLetrasState extends State<ContadorDeLetras> {
   final TextEditingController _textController = TextEditingController();
-
   String _processedText = "";
-
-  void _processText() {
+  void _Textoo() {
     String input = _textController.text;
 
     if (input.isEmpty) {
@@ -37,16 +34,13 @@ class _ContadorDeLetrasState extends State<ContadorDeLetras> {
       });
       return;
     }
-
-    String result = _countCharacters(input);
-
+    String result = _Caracteres(input);
     setState(() {
       _processedText = result;
     });
   }
 
-  // Función para contar letras
-  String _countCharacters(String input) {
+  String _Caracteres(String input) {
     if (input.isEmpty) return "";
 
     StringBuffer result = StringBuffer();
@@ -86,7 +80,7 @@ class _ContadorDeLetrasState extends State<ContadorDeLetras> {
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
-              onPressed: _processText,
+              onPressed: _Textoo,
               child: Text('Procesar Texto'),
             ),
             SizedBox(height: 16.0),
